@@ -1,0 +1,372 @@
+{
+	"__schema" : "4.1",
+	"__type" : "page",
+	"children" : {
+		"__type" : "snippets",
+		"items" : [
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2025-10-29T11:01:13.295557+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2025-10-29T11:09:32.389453+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "+84T86r+DQCYiW2xCAxy/Q=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "Context: {{gtClass:GtInputContext}} (within the {{gtPackage:GtInputContext}} package)"
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2025-10-29T11:00:17.598575+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2025-10-29T11:07:57.011125+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "NebB76r+DQCYWXUKCAxy/Q=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "Perfect — here are **Do-It chunks** that create the minimal `GtInputContext` pipeline using `compile:` (methods) and standard class creation Do-Its. Paste/run them **in order**. [chatgpt](https://chatgpt.com/g/g-p-6901df2a9e408191b0ed4b78c3eb0d76-gtinputcontext/c/6901db8e-ac30-832f-9007-eea9fe9b0491)\n"
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2025-10-29T11:00:34.691648+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2025-10-29T11:00:34.691648+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "w7zG8Kr+DQCYa5WtCAxy/Q=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "### 1) Create classes\n\n```smalltalk\n\"Create package + classes\"\nSmalltalk at: #GtInputContext ifAbsent: [\n\tObject subclass: #GtInputContext\n\t\tinstanceVariableNames: 'parsers rootDirectory outputDirectory projectLabel'\n\t\tclassVariableNames: 'Default'\n\t\tpackage: 'GtInputContext' ].\n\nSmalltalk at: #GtInputFile ifAbsent: [\n\tObject subclass: #GtInputFile\n\t\tinstanceVariableNames: 'reference context'\n\t\tclassVariableNames: ''\n\t\tpackage: 'GtInputContext' ].\n\nSmalltalk at: #GtSpecSetMarkdownParserAdapter ifAbsent: [\n\tObject subclass: #GtSpecSetMarkdownParserAdapter\n\t\tinstanceVariableNames: ''\n\t\tclassVariableNames: ''\n\t\tpackage: 'GtInputContext' ].\n```\n"
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2025-10-29T11:02:00.798092+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2025-10-29T11:02:00.798092+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "MJno9ar+DQCYz+4RCAxy/Q=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "### 2) `GtInputContext` — class side\n\n```smalltalk\nGtInputContext class\ncompile: 'default\n\t^ Default ifNil: [ Default := self new initializeDefault ]'\nclassified: 'accessing'.\n\nGtInputContext class\ncompile: 'resetDefault\n\tDefault := nil'\nclassified: 'accessing'.\n```\n"
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2025-10-29T11:00:56.566072+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2025-10-29T11:02:01.133899+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "638U8qr+DQCYfU/bCAxy/Q=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "### 3) `GtInputContext` — instance side\n\n```smalltalk\nGtInputContext\ncompile: 'initialize\n\tsuper initialize.\n\tparsers := OrderedCollection new'\nclassified: 'initialization'.\n\nGtInputContext\ncompile: 'initializeDefault\n\tself initialize.\n\trootDirectory := FileSystem workingDirectory.\n\toutputDirectory := rootDirectory / ''specset''.\n\tprojectLabel := ''default''.\n\t^ self'\nclassified: 'initialization'.\n\nGtInputContext\ncompile: 'registerParser: aParserClass\n\tparsers add: aParserClass.\n\t^ self'\nclassified: 'parsers'.\n\nGtInputContext\ncompile: 'availableParsers\n\t^ parsers asArray'\nclassified: 'parsers'.\n\nGtInputContext\ncompile: 'scoreParser: parserClass for: aGtInputFile\n\t| score |\n\t[ score := parserClass matchScoreFor: aGtInputFile inContext: self ]\n\t\ton: MessageNotUnderstood\n\t\tdo: [ ^ Dictionary newFrom: {\n\t\t\t#canHandle -> false.\n\t\t\t#priority -> 9999.\n\t\t\t#confidence -> 0.0.\n\t\t\t#why -> ''Parser lacks matchScoreFor:inContext:'' } ].\n\t^ score'\nclassified: 'selection'.\n\nGtInputContext\ncompile: 'candidateParsersFor: aGtInputFile\n\t| scored |\n\tscored := parsers collect: [ :cls | | sc |\n\t\tsc := self scoreParser: cls for: aGtInputFile.\n\t\t{ #parser -> cls . #score -> sc } ].\n\tscored := scored select: [ :e | (e at: #score) at: #canHandle ifAbsent: [ false ] ].\n\t^ scored asSortedCollection: [ :a :b |\n\t\t| pa pb ca cb |\n\t\tpa := ((a at: #score) at: #priority ifAbsent: [ 9999 ]).\n\t\tpb := ((b at: #score) at: #priority ifAbsent: [ 9999 ]).\n\t\tpa < pb ifTrue: [ ^ true ].\n\t\tpa > pb ifTrue: [ ^ false ].\n\t\tca := ((a at: #score) at: #confidence ifAbsent: [ 0.0 ]).\n\t\tcb := ((b at: #score) at: #confidence ifAbsent: [ 0.0 ]).\n\t\t^ ca > cb ]'\nclassified: 'selection'.\n\nGtInputContext\ncompile: 'bestParserFor: aGtInputFile\n\t| c |\n\tc := self candidateParsersFor: aGtInputFile.\n\tc isEmpty ifTrue: [ ^ nil ].\n\t^ (c first) at: #parser'\nclassified: 'selection'.\n\nGtInputContext\ncompile: 'explainSelectionFor: aFileReference\n\t| input candidates winner |\n\tinput := GtInputFile on: aFileReference inContext: self.\n\tcandidates := self candidateParsersFor: input.\n\tcandidates isEmpty ifTrue: [ ^ ''No parser matched this input.'' ].\n\twinner := candidates first.\n\t^ String streamContents: [ :s |\n\t\ts\n\t\t\tnextPutAll: ''Chosen parser: ''; nextPutAll: (winner at: #parser) name; cr;\n\t\t\tnextPutAll: ''Reason: '';\n\t\t\tnextPutAll: (((winner at: #score) at: #why ifAbsent: [ ''—'' ]) asString); cr; cr;\n\t\t\tnextPutAll: ''All candidates (sorted):''; cr.\n\t\tcandidates do: [ :cand | | cls sc |\n\t\t\tcls := cand at: #parser.\n\t\t\tsc  := cand at: #score.\n\t\t\ts nextPutAll: ''- ''; nextPutAll: cls name;\n\t\t\t  nextPutAll: '' | priority=''; nextPutAll: ((sc at: #priority ifAbsent: [ ''—'' ]) asString);\n\t\t\t  nextPutAll: '' confidence=''; nextPutAll: ((sc at: #confidence ifAbsent: [ ''—'' ]) asString);\n\t\t\t  nextPutAll: '' matches=''; nextPutAll: ((sc at: #canHandle ifAbsent: [ false ]) asString); cr;\n\t\t\t  nextPutAll: ''  why: ''; nextPutAll: ((sc at: #why ifAbsent: [ ''—'' ]) asString); cr ] ]'\nclassified: 'selection'.\n```\n"
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2025-10-29T11:02:31.24853+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2025-10-29T11:02:31.24853+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "zkC596r+DQCY4Z13CAxy/Q=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "### 4) `GtInputFile` — class + instance\n\n```smalltalk\nGtInputFile class\ncompile: 'on: aFileReference inContext: aContext\n\t^ self new\n\t\treference: aFileReference;\n\t\tcontext: aContext;\n\t\tyourself'\nclassified: 'instance creation'.\n\nGtInputFile\ncompile: 'reference: aRef\n\treference := aRef'\nclassified: 'accessing'.\n\nGtInputFile\ncompile: 'context: aCtx\n\tcontext := aCtx'\nclassified: 'accessing'.\n\nGtInputFile\ncompile: 'reference\n\t^ reference'\nclassified: 'accessing'.\n\nGtInputFile\ncompile: 'context\n\t^ context'\nclassified: 'accessing'.\n\nGtInputFile\ncompile: 'extension\n\t^ reference extension ifNil: [ '''' ]'\nclassified: 'convenience'.\n\nGtInputFile\ncompile: 'contentsStringLimitedTo: n\n\t| text |\n\ttext := reference readStreamDo: [ :in | in upToEnd ].\n\t^ (text size > n)\n\t\tifTrue: [ text first: n ]\n\t\tifFalse: [ text ]'\nclassified: 'convenience'.\n\nGtInputFile\ncompile: 'candidateParsers\n\t^ self context candidateParsersFor: self'\nclassified: 'selection'.\n\nGtInputFile\ncompile: 'selectionExplanation\n\t^ self context explainSelectionFor: self reference'\nclassified: 'selection'.\n```\n"
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2025-10-29T11:02:39.411441+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2025-10-29T11:03:34.524265+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "us41+Kr+DQCY6FJnCAxy/Q=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "### 5) `FileReference` extensions (view + adapter)\n\n```smalltalk\nFileReference\ncompile: 'asGtInputFile\n\t^ GtInputFile on: self inContext: GtInputContext default'\nclassified: '*GtInputContext-extensions'.\n\nFileReference\ncompile: 'gtInputWhyViewOn: composite\n\t<gtView>\n\t^ composite text\n\t\ttitle: ''Parsers (why & matches)'';\n\t\tpriority: 6;\n\t\tdisplay: [ self asGtInputFile selectionExplanation ]'\nclassified: '*GtInputContext-UI'.\n```\n"
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2025-10-29T11:01:02.194778+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2025-10-29T11:02:45.53091+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "wmZq8qr+DQCYhGRwCAxy/Q=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "### 6) Stub parser (`GtSpecSetMarkdownParserAdapter`)\n\n```smalltalk\nGtSpecSetMarkdownParserAdapter class\ncompile: 'matchScoreFor: aGtInputFile inContext: aContext\n\t| isMd text hasMarkers |\n\tisMd := aGtInputFile extension asLowercase = ''md''.\n\tisMd ifFalse: [ ^ Dictionary newFrom: {\n\t\t#canHandle -> false.\n\t\t#priority -> 10.\n\t\t#confidence -> 0.0.\n\t\t#why -> ''Not a markdown file.'' } ].\n\ttext := aGtInputFile contentsStringLimitedTo: 10000.\n\thasMarkers := #(''# SPEC'' ''# IMPLEMENTATION_PLAN'' ''# RESEARCH'' ''# WORKLOG'')\n\t\tanySatisfy: [ :h | text includesSubstring: h ].\n\t^ Dictionary newFrom: {\n\t\t#canHandle  -> hasMarkers.\n\t\t#priority   -> 2.\n\t\t#confidence -> (hasMarkers ifTrue: [ 0.9 ] ifFalse: [ 0.1 ]).\n\t\t#why        -> (hasMarkers\n\t\t\tifTrue: [ ''Found SPEC/PLAN/RESEARCH/WORKLOG markers.'' ]\n\t\t\tifFalse: [ ''Markdown but no narrative-section markers.'' ]) }'\nclassified: 'matching'.\n```\n"
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2025-10-29T11:00:04.028987+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2025-10-29T11:02:57.480463+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "cOLy7qr+DQCYUWyXCAxy/Q=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "### 7) Register the stub & smoke test\n\n```smalltalk\n\"Register parser once per image\"\nGtInputContext default registerParser: GtSpecSetMarkdownParserAdapter.\n```\n\n```smalltalk\n\"Smoke test in-memory; then inspect the file and click the GT view\"\n| tmp |\ntmp := FileSystem memory / 'draft.md'.\ntmp writeStreamDo: [ :s |\n\ts\n\t\tnextPutAll: '# SPEC'; cr; nextPutAll: 'Goal'; cr; cr;\n\t\tnextPutAll: '# IMPLEMENTATION_PLAN'; cr; nextPutAll: 'Step 1' ].\ntmp inspect.\n```\n\nThat’s it. You’ll get the **Parsers (why & matches)** tab in the inspector with a ranked list and the chosen parser. From here you can swap the stub with your real splitter and keep the selection/explanation flow unchanged.\n"
+			}
+		]
+	},
+	"createEmail" : {
+		"__type" : "email",
+		"emailString" : "<unknown>"
+	},
+	"createTime" : {
+		"__type" : "time",
+		"time" : {
+			"__type" : "dateAndTime",
+			"dateAndTimeString" : "2025-10-29T11:04:44.552422+01:00"
+		}
+	},
+	"editEmail" : {
+		"__type" : "email",
+		"emailString" : "<unknown>"
+	},
+	"editTime" : {
+		"__type" : "time",
+		"time" : {
+			"__type" : "dateAndTime",
+			"dateAndTimeString" : "2025-10-29T11:04:44.552422+01:00"
+		}
+	},
+	"pageType" : {
+		"__type" : "namedPage",
+		"title" : "Create the minimal GtInputContext pipeline"
+	},
+	"uid" : {
+		"__type" : "uuid",
+		"uuid" : "5ce0f2ee-aafe-0d00-9850-1502080c72fd"
+	}
+}
