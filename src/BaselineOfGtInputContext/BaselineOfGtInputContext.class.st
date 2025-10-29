@@ -5,20 +5,19 @@ Class {
 }
 
 { #category : #baseline }
-BaselineOfGtInputContext >> baseline: spec [
+BaselineOfGtInputContext class >> baseline: spec [
 	<baseline>
 	spec
 		for: #common
 		do: [ spec package: 'GtInputContext'.
 			spec
 				package: 'GtInputContext-UI'
-				with: [ :p | p requires: #('GtInputContext') ].
+				with: [ spec requires: #('GtInputContext') ].
 			spec
 				package: 'GtInputContext-Tests'
-				with: [ :p | p requires: #('GtInputContext') ] ].
-	spec
-		group: 'default' with: #('GtInputContext' 'GtInputContext-UI');
-		group: 'tests' with: #('GtInputContext-Tests');
-		group: 'all'
-			with: #('GtInputContext' 'GtInputContext-UI' 'GtInputContext-Tests')
+				with: [ spec requires: #('GtInputContext') ].	"Optional, but handy groups"
+			spec
+				group: 'default'
+				with: [ spec requires: #('GtInputContext' 'GtInputContext-UI') ].
+			spec group: 'tests' with: [ spec requires: #('GtInputContext-Tests') ] ]
 ]
