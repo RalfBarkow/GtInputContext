@@ -5,17 +5,32 @@
 - [ ] Minimal examples & tests scaffolded and runnable in GT.
 - [ ] CI script (optional) to run tests in headless image.
 
+## Phase 0.5 — Baseline & README
+- [ ] Add BaselineOfGtInputContext with package entries (core, UI extensions).
+- [ ] Fix README Metacello snippet to 'github://RalfBarkow/GtInputContext:main/src'.
+- [ ] Provide a “Hello, Why-view” example: create temp file, inspect it, click the view.
+
 ## Phase 1 — Parser Core
 - [ ] Implement `GtSpecSetMarkdownParserAdapter class>>matchScoreFor:inContext:` returning `{canHandle, priority, confidence, why}`.
 - [ ] Implement `#parse:` to extract sections from a `FileReference`.
 - [ ] Implement `#splitFromString:into:` to write the four files to target directory.
 - [ ] Handle missing sections by writing stub files with TODO notes.
 - [ ] Add `<gtExample>` demonstrating in‑memory split.
+- [ ] Suppress matches in fenced/indented code blocks and blockquotes.
+- [ ] Add deterministic tiebreak (class-name) when {priority, confidence} ties occur.
+- [ ] Add negative tests:
+  - markers only inside code fences → no match
+  - uppercase/lowercase variants → document behavior and test accordingly
+  - unknown extensions with markdown-looking content → document chosen behavior
 
 ## Phase 2 — File Writer & Provenance
 - [ ] Add common header (timestamp, source path/label) to each generated file.
 - [ ] Ensure **non‑destructive** write semantics; never mutate source.
 - [ ] Parameterize output directory; default to `specset/` next to source.
+
+## Phase 2.5 — Robustness
+- [ ] Graceful non-text handling (binary or invalid encoding → canHandle=false, why=...).
+- [ ] Cap read length (e.g., 10 KB) for matching and document the cap.
 
 ## Phase 3 — Input Context & Selection Transparency
 - [ ] Implement `GtInputContext` with a parser registry and selection logic.

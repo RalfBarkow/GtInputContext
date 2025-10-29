@@ -1,0 +1,224 @@
+{
+	"__schema" : "4.1",
+	"__type" : "page",
+	"children" : {
+		"__type" : "snippets",
+		"items" : [
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2025-10-29T11:16:39.123381+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2025-10-29T11:16:39.123381+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "/stCKqv+DQCaQWeICAxy/Q=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "Here’s a tight, falsification-oriented review of **GtInputContext**, plus the concrete next step and the exact edits I recommend for your docs."
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2025-10-29T11:17:19.377492+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2025-10-29T11:17:19.377492+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "gAapLKv+DQCaSOOqCAxy/Q=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "# Incisive review (try to break it)\n\n**Repo state sanity**\n\n* Repo has `src/` and the four docs, but the README’s install snippet still shows an **empty Metacello repository URL**, so it’s not loadable as written. ([GitHub][1])\n\n**Likely break points in the selection pipeline**\n\n* **Global singleton drift**: `GtInputContext class>>default` as a global registry risks hidden state (parsers registered in one workspace affect others). Recommend explicit context injection in examples/tests, keep `default` only for convenience.\n* **Zero-parser path**: If no parsers are registered (or none match), `explainSelectionFor:` must return a clear string and the GT view should still render. Verify “no candidates” doesn’t crash the inspector.\n* **Parser contract**: If a parser misses `matchScoreFor:inContext:`, scoring must degrade gracefully (it should — but verify the UI still lists a reason, not an MNU).\n* **Ranking ties**: With equal `priority` and `confidence`, ordering should be stable (e.g., by class name) to avoid flickering winners across runs.\n* **False positives**: Headings inside code fences `…` or blockquotes `>` must **not** count toward matches. Right now a naïve `includesSubstring:` would select the narrative splitter even for code samples.\n* **Case/locale & synonyms**: `# implementation_plan` vs `# IMPLEMENTATION_PLAN`; `# PLAN` or `# RESEARCH NOTES`. Decide exact semantics and document them (initial strictness is fine, but then your “why” text must say it explicitly).\n* **Pathological inputs**:\n\n  * Large files (multi-MB notes) — ensure `contentsStringLimitedTo:` cap is enforced everywhere used for matching.\n  * Non-UTF8 / binary files — the selection view should degrade with a clear “non-text input” reason.\n  * Unknown extensions like `.mdown`, `.markdown`, or no extension — define behavior (likely treat as markdown if contents look like it).\n* **UI robustness**: The GT “Parsers (why & matches)” view should be **text-only** and never block on IO. Keep actions (e.g., “Write files”) separate to avoid any side effects during inspection.\n* **Provenance & safety**: Never write beside the source by default. Always require an explicit output directory. Confirm current splitter APIs don’t mutate input.\n* **Baseline & loadability**: Without a proper `BaselineOfGtInputContext` and a working repo URL in README, users can’t load it. ([GitHub][2])\n"
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2025-10-29T11:23:01.852815+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2025-10-29T11:23:01.852815+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "qMgSQav+DQCasmGXCAxy/Q=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "# What to do next (single high-leverage loop)\n\n1. **Ship a runnable “why & matches” demo from a clean image**\n\n* Add `BaselineOfGtInputContext` and fix the README Metacello snippet to:\n\n  ```\n  Metacello new\n    baseline: 'GtInputContext';\n    repository: 'github://RalfBarkow/GtInputContext:main/src';\n    load.\n  ```\n\n  (The current snippet has an empty repo URL.) ([GitHub][2])\n\n* Ensure the default context registers at least one parser (your stub or the real splitter) and that {{gtMethod:FileReference>>gtInputWhyViewOn:}} renders even with **no** candidates.\n\n2. **Harden matching**\n\n* Ignore headings **inside fenced code** and blockquotes.\n* Add a deterministic tiebreaker when `priority` and `confidence` match.\n\n3. **Document the selection contract**\n\n* In `README.md` and `SPEC.md`: define the parser return shape `{canHandle, priority, confidence, why}`; note exact heading rules (case-sensitive, literal, out of code fences).\n"
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2025-10-29T11:23:11.105898+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2025-10-29T11:23:11.105898+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "rvmfQav+DQCauVF8CAxy/Q=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "# Doc updates (add/replace these sections)\n"
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2025-10-29T11:16:27.217963+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2025-10-29T11:23:11.119619+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "XyiNKav+DQCaOaZnCAxy/Q=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "## SPEC.md — replace/add these sections\n\n**Add under “Functional Requirements” → Matching**\n\n````\n- The selector MUST ignore narrative markers that appear within:\n  - fenced code blocks (``` … ```),\n  - indented code blocks,\n  - blockquotes (lines starting with '> ').\n- If multiple parsers have identical {priority, confidence}, the winner is the\n  lexicographically smallest class name to ensure deterministic selection.\n- If no parser matches, the system MUST return a clear, human-readable explanation\n  and the GT view MUST render without error.\n````\n\n**Add “Risks & Falsification Plan”**\n\n```\n- False positives from markers inside code: covered by code/quote suppression.\n- Global singleton drift (Default context pollution): examples prefer explicit\n  context injection; default exists only for convenience.\n- Large and/or non-text inputs: matching operates on a capped preview (e.g. 10 KB).\n  Non-UTF8/binary yields a non-match with a reason.\n```\n\n**Tighten “Acceptance Criteria”**\n\n```\n- From a clean image, loading the baseline via the README snippet succeeds.\n- Inspecting a temp markdown file without markers renders the Why-view and shows\n  “no parser matched” without errors.\n- A file with markers inside a fenced block does NOT match.\n- A file with markers in normal text DOES match; explanation lists all candidates\n  and a deterministic winner.\n```\n\n## IMPLEMENTATION_PLAN.md — append to Phase 1 & add a Phase “0.5”\n\n**Add Phase 0.5 — Baseline & README**\n\n```\n- Add BaselineOfGtInputContext with package entries (core, UI extensions).\n- Fix README Metacello snippet to 'github://RalfBarkow/GtInputContext:main/src'.\n- Provide a “Hello, Why-view” example: create temp file, inspect it, click the view.\n```\n\n**Augment Phase 1 — Parser Core**\n\n```\n- Suppress matches in fenced/indented code blocks and blockquotes.\n- Add deterministic tiebreak (class-name) when {priority, confidence} ties occur.\n- Add negative tests:\n  - markers only inside code fences → no match\n  - uppercase/lowercase variants → document behavior and test accordingly\n  - unknown extensions with markdown-looking content → document chosen behavior\n```\n\n**Add a tiny Phase 2.5 — Robustness**\n\n```\n- Graceful non-text handling (binary or invalid encoding → canHandle=false, why=...).\n- Cap read length (e.g., 10 KB) for matching and document the cap.\n```\n\n## RESEARCH.md — add a short “Alternatives & Trade-offs”\n\n```\n- Alternative: global plugin registry vs per-context registry. We pick per-context\n  to avoid cross-project leakage; keep a Default for quick demos.\n- Alternative: full Markdown AST parse to avoid code/quote false positives.\n  We start with light heuristics for speed; AST can come later if needed.\n- Trade-off: strict heading names increase precision but reduce recall.\n  We document exact matching and plan alias heuristics later.\n```\n\n## WORKLOG.md — add today’s entry (2025-10-29)\n\n```\n## 2025-10-29\n- Review: hardened selection design; identified risks (code-fence false positives,\n  singleton drift, tie instability, non-text handling).\n- Plan: add Baseline + README repo URL; suppress code/quote matches; add tie\n  tiebreak; negative tests; deterministic Why-view with zero parsers.\n- Next: implement Phase 0.5 & Phase 1 bullets; run clean-image demo end-to-end.\n```\n\n# Suggested commit message (plain text)\n\n```\nchore(readme+baseline): make package loadable; harden parser selection & document falsification\n\n- Add BaselineOfGtInputContext and fix Metacello snippet to github://RalfBarkow/GtInputContext:main/src.\n- SPEC: define matching suppression for code/quotes, deterministic tie rule, and clear no-match behavior; add falsification criteria.\n- PLAN: add Phase 0.5 (baseline+README), robustness tasks (binary/encoding, size cap), and negative tests.\n- RESEARCH: record registry vs global trade-offs and AST vs heuristic parsing rationale.\n- WORKLOG: log review, risks, and next steps (2025-10-29).\n```\n\nIf you want, I can turn the baseline + README snippet and a minimal SUnit test class into Do-It chunks next, so you can paste them straight into GT and commit.\n\n[1]: https://github.com/RalfBarkow/GtInputContext \"GitHub - RalfBarkow/GtInputContext\"\n[2]: https://github.com/RalfBarkow/GtInputContext/blob/main/README.md \"GtInputContext/README.md at main · RalfBarkow/GtInputContext · GitHub\"\n"
+			}
+		]
+	},
+	"createEmail" : {
+		"__type" : "email",
+		"emailString" : "<unknown>"
+	},
+	"createTime" : {
+		"__type" : "time",
+		"time" : {
+			"__type" : "dateAndTime",
+			"dateAndTimeString" : "2025-10-29T11:19:50.456353+01:00"
+		}
+	},
+	"editEmail" : {
+		"__type" : "email",
+		"emailString" : "<unknown>"
+	},
+	"editTime" : {
+		"__type" : "time",
+		"time" : {
+			"__type" : "dateAndTime",
+			"dateAndTimeString" : "2025-10-29T11:19:50.456353+01:00"
+		}
+	},
+	"pageType" : {
+		"__type" : "namedPage",
+		"title" : "chore(readme+baseline): make package loadable; harden parser selection & document falsification"
+	},
+	"uid" : {
+		"__type" : "uuid",
+		"uuid" : "55a08c29-abfe-0d00-9a38-fb4d080c72fd"
+	}
+}

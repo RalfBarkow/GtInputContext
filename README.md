@@ -3,7 +3,7 @@
 
 ```st
 Metacello new
-	repository: 'git@github.com:RalfBarkow/GtInputContext.git';
-	baseline: 'GtInputContext';
-	load
+    baseline: 'GtInputContext';
+    repository: 'github://RalfBarkow/GtInputContext:main/src';
+    load.
 ```

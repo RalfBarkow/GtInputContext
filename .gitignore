@@ -1,0 +1,2 @@
+# Ignore Lepiter backup files (.bak) in any lepiter/ folder
+**/lepiter/**/*.bak

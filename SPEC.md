@@ -33,6 +33,14 @@ We want a **repeatable, inspectable, non‑destructive** mechanism inside Glamor
 1. **Matching**
    - Recognize headings (case-sensitive initial version): `# SPEC`, `# IMPLEMENTATION_PLAN`, `# RESEARCH`, `# WORKLOG`.
    - `matchScoreFor:inContext:` returns a dictionary used for selection.
+   - The selector MUST ignore narrative markers that appear within:
+     - fenced code blocks (``` … ```),
+     - indented code blocks,
+     - blockquotes (lines starting with '> ').
+   - If multiple parsers have identical {priority, confidence}, the winner is the 
+     lexicographically smallest class name to ensure deterministic selection.
+   - If no parser matches, the system MUST return a clear, human-readable explanation
+    and the GT view MUST render without error.
 2. **Parsing**
    - `parse:` accepts a `FileReference` (or memory file) containing Markdown.
    - `splitFromString:into:` accepts a `String` and a target directory, writes 4 files.

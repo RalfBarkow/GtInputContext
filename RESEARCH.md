@@ -28,4 +28,12 @@ Most tools optimize for convergence; we explicitly support exploration and provi
 - Add examples that take a small real exploratory note (chat/WORKLOG snippet) and show end‑to‑end split.
 - Consider embedding a YAML front‑matter block with provenance into outputs (optional).
 
+## Alternatives & Trade-offs
+- Alternative: global plugin registry vs per-context registry. We pick per-context
+  to avoid cross-project leakage; keep a Default for quick demos.
+- Alternative: full Markdown AST parse to avoid code/quote false positives.
+  We start with light heuristics for speed; AST can come later if needed.
+- Trade-off: strict heading names increase precision but reduce recall.
+  We document exact matching and plan alias heuristics later.
+
 *Compiled 2025-10-29. Iterate as understanding evolves.*
