@@ -29,7 +29,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-10-29T11:44:17.071859+01:00"
+						"dateAndTimeString" : "2025-10-29T12:03:30.331291+01:00"
 					}
 				},
 				"uid" : {
@@ -39,7 +39,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "Context: {{gtClass:BaselineOfGtInputContext}}"
+				"string" : "Context: {{gtClass:BaselineOfGtInputContext}} and {{gtClass:GtInputContextTests}}"
 			},
 			{
 				"__type" : "textSnippet",
@@ -108,7 +108,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2025-10-29T11:50:21.2148+01:00"
+									"dateAndTimeString" : "2025-10-29T12:02:17.199165+01:00"
 								}
 							},
 							"uid" : {
@@ -118,7 +118,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "```smalltalk\n\"Create/replace the baseline class and its methods\"\nSmalltalk at: #BaselineOfGtInputContext ifAbsent: [\n\tBaselineOf subclass: #BaselineOfGtInputContext\n\t\tinstanceVariableNames: ''\n\t\tclassVariableNames: ''\n\t\tpackage: 'GtInputContext-Baseline' ].\n\nBaselineOfGtInputContext\ncompile: 'baseline: spec\n\t<baseline>\n\tspec for: #common do: [\n\t\tspec package: ''GtInputContext''.\n\t\tspec package: ''GtInputContext-UI'' with: [ :p | p requires: #(''GtInputContext'') ].\n\t\tspec package: ''GtInputContext-Tests'' with: [ :p | p requires: #(''GtInputContext'') ] ].\n\tspec\n\t\tgroup: ''default'' with: #(''GtInputContext'' ''GtInputContext-UI'');\n\t\tgroup: ''tests''   with: #(''GtInputContext-Tests'');\n\t\tgroup: ''all''     with: #(''GtInputContext'' ''GtInputContext-UI'' ''GtInputContext-Tests'')'\nclassified: 'baseline'.\n```\n\n> Loads **core + UI** by default; tests are available via the `tests` group.\n\n"
+							"string" : "```smalltalk\n\"Create/replace the baseline class and its methods\"\nSmalltalk at: #BaselineOfGtInputContext ifAbsent: [\n\tBaselineOf subclass: #BaselineOfGtInputContext\n\t\tinstanceVariableNames: ''\n\t\tclassVariableNames: ''\n\t\tpackage: 'GtInputContext-Baseline' ].\n\nBaselineOfGtInputContext\ncompile: 'baseline: spec\n\t<baseline>\n\tspec for: #common do: [\n\t\tspec package: ''GtInputContext''.\n\t\tspec package: ''GtInputContext-UI'' with: [ :p | p requires: #(''GtInputContext'') ].\n\t\tspec package: ''GtInputContext-Tests'' with: [ :p | p requires: #(''GtInputContext'') ] ].\n\tspec\n\t\tgroup: ''default'' with: #(''GtInputContext'' ''GtInputContext-UI'');\n\t\tgroup: ''tests''   with: #(''GtInputContext-Tests'');\n\t\tgroup: ''all''     with: #(''GtInputContext'' ''GtInputContext-UI'' ''GtInputContext-Tests'')'\nclassified: 'baseline'.\n```\n\n> Loads **core + UI** by default; tests are available via the `tests` group.\n"
 						}
 					]
 				},
@@ -465,7 +465,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-10-29T11:47:15.235255+01:00"
+						"dateAndTimeString" : "2025-10-29T12:00:28.621242+01:00"
 					}
 				},
 				"uid" : {
@@ -475,7 +475,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "### Optional hardening (fast follow)\n\nIf you’re ready to capture the falsification fixes, add these to your **plan/spec** and implement next:\n\n* **Code/quote suppression** in `GtSpecSetMarkdownParserAdapter class>>matchScoreFor:inContext:` so markers inside ``` fences / blockquotes don’t match.\n* **Deterministic tiebreak** when `{priority, confidence}` ties (e.g., class-name order).\n* **Binary/non-UTF8 guard** (return `canHandle -> false`, `why -> 'Non-text input'`).\n* **Preview length cap** (e.g., 10 KB) consistently used during matching.\n\nIf you want, say the word and I’ll provide Do-Its for those hardening steps too (plus red→green tests).\n"
+				"string" : "### Optional hardening (fast follow)\n\nIf you’re ready to capture the falsification fixes, add these to your **plan/spec** and implement next:\n\n* **Code/quote suppression** in {{gtMethod:GtSpecSetMarkdownParserAdapter class>>matchScoreFor:inContext:}} so markers inside ``` fences / blockquotes don’t match.\n* **Deterministic tiebreak** when `{priority, confidence}` ties (e.g., class-name order).\n* **Binary/non-UTF8 guard** (return `canHandle -> false`, `why -> 'Non-text input'`).\n* **Preview length cap** (e.g., 10 KB) consistently used during matching.\n\nIf you want, say the word and I’ll provide Do-Its for those hardening steps too (plus red→green tests).\n"
 			}
 		]
 	},
@@ -498,12 +498,12 @@
 		"__type" : "time",
 		"time" : {
 			"__type" : "dateAndTime",
-			"dateAndTimeString" : "2025-10-29T11:43:48.26592+01:00"
+			"dateAndTimeString" : "2025-10-29T12:03:43.983419+01:00"
 		}
 	},
 	"pageType" : {
 		"__type" : "namedPage",
-		"title" : "baseline:"
+		"title" : "baseline: and test cases"
 	},
 	"uid" : {
 		"__type" : "uuid",
