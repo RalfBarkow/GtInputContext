@@ -1,0 +1,512 @@
+{
+	"__schema" : "4.1",
+	"__type" : "page",
+	"children" : {
+		"__type" : "snippets",
+		"items" : [
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2025-10-29T11:44:06.698394+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2025-10-29T11:44:17.071859+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "/9F2jKv+DQCbGA23CAxy/Q=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "Context: {{gtClass:BaselineOfGtInputContext}}"
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2025-10-29T11:39:06.716781+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2025-10-29T11:39:06.716781+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "tXCVeqv+DQCa8ZAjCAxy/Q=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "Awesome — here are the promised **Do-It chunks** to (1) add a working Metacello baseline, (2) provide a ready-to-paste README loader snippet, and (3) create a **minimal SUnit test class** you can run immediately.\n"
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2025-10-29T11:43:51.569368+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2025-10-29T11:50:21.2148+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "F/SPi6v+DQCbDwj2CAxy/Q=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "```smalltalk\n\"Create/replace the baseline class and its methods\"\nSmalltalk at: #BaselineOfGtInputContext ifAbsent: [\n\tBaselineOf subclass: #BaselineOfGtInputContext\n\t\tinstanceVariableNames: ''\n\t\tclassVariableNames: ''\n\t\tpackage: 'GtInputContext-Baseline' ].\n\nBaselineOfGtInputContext\ncompile: 'baseline: spec\n\t<baseline>\n\tspec for: #common do: [\n\t\tspec package: ''GtInputContext''.\n\t\tspec package: ''GtInputContext-UI'' with: [ :p | p requires: #(''GtInputContext'') ].\n\t\tspec package: ''GtInputContext-Tests'' with: [ :p | p requires: #(''GtInputContext'') ] ].\n\tspec\n\t\tgroup: ''default'' with: #(''GtInputContext'' ''GtInputContext-UI'');\n\t\tgroup: ''tests''   with: #(''GtInputContext-Tests'');\n\t\tgroup: ''all''     with: #(''GtInputContext'' ''GtInputContext-UI'' ''GtInputContext-Tests'')'\nclassified: 'baseline'.\n```\n\n> Loads **core + UI** by default; tests are available via the `tests` group.\n\n"
+						}
+					]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2025-10-29T11:50:21.179301+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2025-10-29T11:50:21.179301+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "lObIoqv+DQClnFkECAxy/Q=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "### 1) Baseline (`BaselineOfGtInputContext`) — Do-It"
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2025-10-29T11:46:05.163743+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2025-10-29T11:50:37.29665+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "vm6Gk6v+DQCbh7BHCAxy/Q=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "````markdown\n### Load\n\n```smalltalk\nMetacello new\n  baseline: 'GtInputContext';\n  repository: 'github://RalfBarkow/GtInputContext:main/src';\n  load.  \"or: load: 'tests' / 'all'\"\n````\n\n````\n\n*(If you prefer generating the README from GT: replace the repo root below and run.)*\n\n```smalltalk\n| dir readme |\ndir := FileSystem workingDirectory.  \"← set this to your repo root if needed\"\nreadme := dir / 'README.md'.\nreadme writeStreamDo: [ :s |\n\ts nextPutAll:\n'### Load\n\n```smalltalk\nMetacello new\n  baseline: ''GtInputContext'';\n  repository: ''github://RalfBarkow/GtInputContext:main/src'';\n  load.  \"or: load: ''tests'' / ''all''\"\n```' ].\nreadme pathString\n````\n"
+						}
+					]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2025-10-29T11:50:37.261883+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2025-10-29T11:50:37.261883+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "AFO+o6v+DQClpluxCAxy/Q=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "### 2) README loader snippet — paste this into `README.md`"
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [
+						{
+							"__type" : "pharoSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2025-10-29T11:47:27.230142+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2025-10-29T11:47:52.31725+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "trJqmKv+DQCb3vtdCAxy/Q=="
+							},
+							"code" : "\"Create a tiny test suite for selection/explanation\"\nSmalltalk at: #GtInputContextTests ifAbsent: [\n\tTestCase subclass: #GtInputContextTests\n\t\tinstanceVariableNames: ''\n\t\tclassVariableNames: ''\n\t\tpackage: 'GtInputContext-Tests' ].\n"
+						},
+						{
+							"__type" : "pharoSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2025-10-29T11:51:59.864659+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2025-10-29T11:52:12.308108+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "isOqqKv+DQClw5GACAxy/Q=="
+							},
+							"code" : "GtInputContextTests\ncompile: 'testExplainSelectionWithNoParsersShowsNoMatch\n\t| ctx tmp explanation |\n\tctx := GtInputContext new initializeDefault.  \"no parsers registered\"\n\ttmp := FileSystem memory / ''empty.md''.\n\ttmp writeStreamDo: [ :s | s nextPutAll: ''Hello'' ].\n\texplanation := ctx explainSelectionFor: tmp.\n\tself assert: (explanation includesSubstring: ''No parser matched'')'\nclassified: 'tests'.\n\nGtInputContextTests\ncompile: 'testBestParserPicksSpecSetAdapterOnMarkers\n\t| ctx tmp input winner |\n\tctx := GtInputContext new initializeDefault.\n\tctx registerParser: GtSpecSetMarkdownParserAdapter.\n\ttmp := FileSystem memory / ''draft.md''.\n\ttmp writeStreamDo: [ :s |\n\t\ts\n\t\t\tnextPutAll: ''# SPEC''; cr; nextPutAll: ''Goal''; cr; cr;\n\t\t\tnextPutAll: ''# IMPLEMENTATION_PLAN''; cr; nextPutAll: ''Step 1'' ].\n\tinput := GtInputFile on: tmp inContext: ctx.\n\twinner := ctx bestParserFor: input.\n\tself assert: winner equals: GtSpecSetMarkdownParserAdapter'\nclassified: 'tests'.\n\nGtInputContextTests\ncompile: 'testWhyViewListsCandidates\n\t| ctx tmp input candidates explanation |\n\tctx := GtInputContext new initializeDefault.\n\tctx registerParser: GtSpecSetMarkdownParserAdapter.\n\ttmp := FileSystem memory / ''draft.md''.\n\ttmp writeStreamDo: [ :s | s nextPutAll: ''# RESEARCH''; cr; nextPutAll: ''Notes'' ].\n\tinput := GtInputFile on: tmp inContext: ctx.\n\tcandidates := ctx candidateParsersFor: input.\n\tself deny: candidates isEmpty.\n\texplanation := ctx explainSelectionFor: tmp.\n\tself assert: (explanation includesSubstring: ''Chosen parser:'')'\nclassified: 'tests'."
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [
+									{
+										"__type" : "pharoSnippet",
+										"children" : {
+											"__type" : "snippets",
+											"items" : [ ]
+										},
+										"createEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"createTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2025-10-29T11:52:58.030801+01:00"
+											}
+										},
+										"editEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"editTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2025-10-29T11:52:59.505152+01:00"
+											}
+										},
+										"uid" : {
+											"__type" : "uid",
+											"uidString" : "CU8irKv+DQCl4FxgCAxy/Q=="
+										},
+										"code" : "\"Headless run\"\n(GtInputContextTests buildSuite) run."
+									},
+									{
+										"__type" : "pharoSnippet",
+										"children" : {
+											"__type" : "snippets",
+											"items" : [ ]
+										},
+										"createEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"createTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2025-10-29T11:53:26.630738+01:00"
+											}
+										},
+										"editEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"editTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2025-10-29T11:53:30.364733+01:00"
+											}
+										},
+										"uid" : {
+											"__type" : "uid",
+											"uidString" : "hLXWrav+DQCl6LZECAxy/Q=="
+										},
+										"code" : "\"Or open the Test Runner UI\"\nSmalltalk tools openTestRunner."
+									}
+								]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2025-10-29T11:53:45.838586+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2025-10-29T11:53:45.838586+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "S8D7rqv+DQCmBGgGCAxy/Q=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "**Run the tests**"
+						}
+					]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2025-10-29T11:47:02.677216+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2025-10-29T11:47:02.677216+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "3AT0lqv+DQCbx6VuCAxy/Q=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "### 3) Minimal SUnit tests — Do-It"
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2025-10-29T11:39:01.81016+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2025-10-29T11:47:15.235255+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "O5hKeqv+DQCa6aBaCAxy/Q=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "### Optional hardening (fast follow)\n\nIf you’re ready to capture the falsification fixes, add these to your **plan/spec** and implement next:\n\n* **Code/quote suppression** in `GtSpecSetMarkdownParserAdapter class>>matchScoreFor:inContext:` so markers inside ``` fences / blockquotes don’t match.\n* **Deterministic tiebreak** when `{priority, confidence}` ties (e.g., class-name order).\n* **Binary/non-UTF8 guard** (return `canHandle -> false`, `why -> 'Non-text input'`).\n* **Preview length cap** (e.g., 10 KB) consistently used during matching.\n\nIf you want, say the word and I’ll provide Do-Its for those hardening steps too (plus red→green tests).\n"
+			}
+		]
+	},
+	"createEmail" : {
+		"__type" : "email",
+		"emailString" : "<unknown>"
+	},
+	"createTime" : {
+		"__type" : "time",
+		"time" : {
+			"__type" : "dateAndTime",
+			"dateAndTimeString" : "2025-10-29T11:43:48.26592+01:00"
+		}
+	},
+	"editEmail" : {
+		"__type" : "email",
+		"emailString" : "<unknown>"
+	},
+	"editTime" : {
+		"__type" : "time",
+		"time" : {
+			"__type" : "dateAndTime",
+			"dateAndTimeString" : "2025-10-29T11:43:48.26592+01:00"
+		}
+	},
+	"pageType" : {
+		"__type" : "namedPage",
+		"title" : "baseline:"
+	},
+	"uid" : {
+		"__type" : "uuid",
+		"uuid" : "75954a7a-abfe-0d00-9ae8-93e5080c72fd"
+	}
+}
